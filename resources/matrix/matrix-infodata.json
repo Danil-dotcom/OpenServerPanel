@@ -1239,8 +1239,8 @@
                 "English": "https://www.php.net/manual/en/",
                 "Russian": "https://www.php.net/manual/ru/"
             },
-            "DownloadUrl": "https://files.ospanel.io/~windows/releases/php-8.3.25-nts-Win32-vs16-x64.zip",
-            "DownloadUrl_bin": "https://files.ospanel.io/~windows/releases/php-bin-pack-8.3.25-nts-Win32-vs16-x64.zip",
+            "DownloadUrl": "https://files.ospanel.io/~windows/releases/php-8.3.26-nts-Win32-vs16-x64.zip",
+            "DownloadUrl_bin": "https://files.ospanel.io/~windows/releases/php-bin-pack-8.3.26-nts-Win32-vs16-x64.zip",
             "DownloadUrl_ext": "https://github.com/OSPanel/php-windows-builder/releases/download/ext-pack/php-ext-pack-8.3-nts-Win32-vs16-x64.zip",
             "help": "--help",
             "main":
@@ -1255,7 +1255,7 @@
                 "min_windows_ver": "10.0.10240",
                 "php_engine": "yes",
                 "timestamp": "1651770000",
-                "version": "8.3.25"
+                "version": "8.3.26"
             }
         },
         "PHP-8.4":
@@ -1265,8 +1265,8 @@
                 "English": "https://www.php.net/manual/en/",
                 "Russian": "https://www.php.net/manual/ru/"
             },
-            "DownloadUrl": "https://files.ospanel.io/~windows/releases/php-8.4.12-nts-Win32-vs17-x64.zip",
-            "DownloadUrl_bin": "https://files.ospanel.io/~windows/releases/php-bin-pack-8.4.12-nts-Win32-vs17-x64.zip",
+            "DownloadUrl": "https://files.ospanel.io/~windows/releases/php-8.4.13-nts-Win32-vs17-x64.zip",
+            "DownloadUrl_bin": "https://files.ospanel.io/~windows/releases/php-bin-pack-8.4.13-nts-Win32-vs17-x64.zip",
             "DownloadUrl_ext": "https://github.com/OSPanel/php-windows-builder/releases/download/ext-pack/php-ext-pack-8.4-nts-Win32-vs17-x64.zip",
             "help": "--help",
             "main":
@@ -1281,7 +1281,7 @@
                 "min_windows_ver": "10.0.10240",
                 "php_engine": "yes",
                 "timestamp": "1651770000",
-                "version": "8.4.12"
+                "version": "8.4.13"
             }
         },
         "PostgreSQL-11":
