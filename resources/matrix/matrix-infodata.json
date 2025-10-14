@@ -630,7 +630,7 @@
                 "min_windows_ver": "10.0.10240",
                 "timestamp": "1651770000",
                 "version": "2.4.65",
-                "web_engine": "yes"
+                "http_engine": "yes"
             }
         },
         "Bind":
@@ -680,7 +680,7 @@
             {
                 "English": "https://mailpit.axllent.org/docs/"
             },
-            "DownloadUrl": "https://github.com/axllent/mailpit/releases/download/v1.27.9/mailpit-windows-amd64.zip",
+            "DownloadUrl": "https://github.com/axllent/mailpit/releases/download/v1.27.10/mailpit-windows-amd64.zip",
             "help": "-h",
             "main":
             {
@@ -693,7 +693,7 @@
                 "license_type": "MIT license",
                 "min_windows_ver": "10.0.10240",
                 "timestamp": "1651770000",
-                "version": "1.27.9"
+                "version": "1.27.10"
             }
         },
         "MariaDB-10.11":
@@ -1060,7 +1060,7 @@
                 "English": "https://nginx.org/en/docs/",
                 "Russian": "https://nginx.org/ru/docs/"
             },
-            "DownloadUrl": "https://github.com/OSPanel/nginx/releases/download/release-1.29.1/nginx-1.29.1.zip",
+            "DownloadUrl": "https://github.com/OSPanel/nginx/releases/download/release-1.29.2/nginx-1.29.2.zip",
             "help": "-h",
             "main":
             {
@@ -1072,8 +1072,8 @@
                 "license_type": "FreeBSD License",
                 "min_windows_ver": "10.0.10240",
                 "timestamp": "1651770000",
-                "version": "1.29.1",
-                "web_engine": "yes"
+                "version": "1.29.2",
+                "http_engine": "yes"
             }
         },
         "PHP-7.2":
@@ -1516,7 +1516,7 @@
             {
                 "English": "https://redis.io/docs/"
             },
-            "DownloadUrl": "https://github.com/zkteco-home/redis-windows/archive/refs/tags/8.2.1.zip",
+            "DownloadUrl": "https://github.com/zkteco-home/redis-windows/archive/refs/tags/8.2.2.zip",
             "help": "--help",
             "main":
             {
@@ -1528,7 +1528,7 @@
                 "license_type": "BSD License 2.0",
                 "min_windows_ver": "6.1.7601",
                 "timestamp": "1651770000",
-                "version": "8.2.1"
+                "version": "8.2.2"
             }
         },
         "Smtp4dev":
