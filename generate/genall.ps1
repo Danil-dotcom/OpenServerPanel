@@ -34,7 +34,7 @@ $script:FailedModules = 0
 
 # Variables for tracking execution stages
 $script:CurrentMainStep = 0
-$script:TotalMainSteps = 8
+$script:TotalMainSteps = 9
 $script:CurrentAddonSubStep = 0
 $script:TotalAddonSubSteps = 6
 $script:CurrentToolSubStep = 0
@@ -788,6 +788,102 @@ function Install-LocalFiles {
         } else {
             Write-Warning "Local file not found: $file"
         }
+    }
+}
+
+function Install-PhpMyAdmin {
+    param(
+        [string]$DownloadUrl = "https://files.phpmyadmin.net/phpMyAdmin/5.2.2/phpMyAdmin-5.2.2-all-languages.zip",
+        [string]$TargetDir   = "..\home\phpmyadmin"
+    )
+
+    try {
+        Write-Stage "PHPMYADMIN" "Preparing target directory" $TargetDir
+        if (-not (Test-Path $TargetDir)) {
+            New-Item -ItemType Directory -Force -Path $TargetDir | Out-Null
+            Write-Success "Created directory: $TargetDir"
+        } else {
+            Write-Success "Target directory exists: $TargetDir"
+        }
+
+        # Загружаем архив в кэш и во временный файл
+        $tmpZip = Join-Path $env:TEMP ("pma_" + (Get-Random) + ".zip")
+        Write-Stage "PHPMYADMIN" "Downloading archive" $DownloadUrl
+        if (-not (Get-CachedFile -Url $DownloadUrl -OutFile $tmpZip)) {
+            Write-Error "Failed to download phpMyAdmin archive"
+            return $false
+        }
+
+        # Распаковываем во временную папку
+        $tmpExtract = New-TempDir
+        Write-Stage "PHPMYADMIN" "Extracting to temp" $tmpExtract
+        try {
+            Expand-Archive -Path $tmpZip -DestinationPath $tmpExtract -Force
+        } catch {
+            Write-Error "Error extracting phpMyAdmin archive: $_"
+            Remove-Item $tmpZip -Force -ErrorAction SilentlyContinue
+            Remove-Item $tmpExtract -Recurse -Force -ErrorAction SilentlyContinue
+            return $false
+        }
+
+        # Находим корневую папку внутри архива (обычно "phpMyAdmin-5.2.2-all-languages")
+        $innerDir = Get-ChildItem -Path $tmpExtract -Directory -ErrorAction SilentlyContinue | Select-Object -First 1
+        if (-not $innerDir) {
+            $innerDirPath = $tmpExtract
+        } else {
+            $innerDirPath = $innerDir.FullName
+        }
+
+        # Копируем содержимое в ..\home\phpmyadmin БЕЗ ПЕРЕЗАПИСИ СУЩЕСТВУЮЩИХ ФАЙЛОВ
+        # ВАЖНО: именно без замены (если файл существует — пропускаем его).
+        Write-Stage "PHPMYADMIN" "Copying files without overwrite" $TargetDir
+
+        $copied = 0
+        $skipped = 0
+
+        # Копируем каталоги
+        Get-ChildItem -Path $innerDirPath -Recurse -Force | ForEach-Object {
+            $relPath = $_.FullName.Substring($innerDirPath.Length).TrimStart('\','/')
+            $destPath = Join-Path $TargetDir $relPath
+
+            if ($_.PSIsContainer) {
+                if (-not (Test-Path $destPath)) {
+                    New-Item -ItemType Directory -Force -Path $destPath | Out-Null
+                }
+                return
+            }
+
+            # Файл: если уже существует — пропускаем, иначе копируем
+            if (Test-Path $destPath -PathType Leaf) {
+                $skipped++
+            } else {
+                Ensure-Directory -FilePath $destPath
+                try {
+                    Copy-Item -Path $_.FullName -Destination $destPath -Force:$false
+                    $copied++
+                } catch {
+                    # На случай, если PowerShell всё же пытается перезаписать — перестрахуемся
+                    if (-not (Test-Path $destPath)) {
+                        Copy-Item -Path $_.FullName -Destination $destPath
+                        $copied++
+                    } else {
+                        $skipped++
+                    }
+                }
+            }
+        }
+
+        Write-Success "phpMyAdmin copied: $copied new files, skipped (already exist): $skipped"
+
+        # Удаляем временные файлы
+        Remove-Item $tmpZip -Force -ErrorAction SilentlyContinue
+        Remove-Item $tmpExtract -Recurse -Force -ErrorAction SilentlyContinue
+
+        Write-Success "phpMyAdmin installation completed"
+        return $true
+    } catch {
+        Write-Error "phpMyAdmin installation error: $_"
+        return $false
     }
 }
 
@@ -1832,8 +1928,17 @@ Write-Host ""
 Write-Banner "STEP $($script:CurrentMainStep)/$($script:TotalMainSteps): COPYING ADDITIONAL FILES" "Magenta"
 Copy-AdditionalFiles
 
-# STEP 8: Final Statistics
 $script:CurrentMainStep = 8
+Write-Host ""
+Write-Banner "STEP $($script:CurrentMainStep)/$($script:TotalMainSteps): INSTALLING PHPMYADMIN" "Magenta"
+if (-not (Install-PhpMyAdmin)) {
+    Write-Warning "Critical error installing phpMyAdmin"
+} else {
+    Write-Success "phpMyAdmin successfully installed"
+}
+
+# STEP 8: Final Statistics
+$script:CurrentMainStep = 9
 Write-Host ""
 Write-Banner "STEP $($script:CurrentMainStep)/$($script:TotalMainSteps): FINAL STATISTICS" "Green"
 Show-Summary
