@@ -68,93 +68,93 @@
 </head>
 
 <body>
-    <h2 style="margin-top: 0.33em">Global Module Settings</h2>
-    <p>Parameters set in this section are applied when the corresponding option in the specific module settings is set to auto (default).</p>
+    <h2 style="margin-top: 0.33em">Global module settings</h2>
+    <p>The parameters specified in this section apply when the corresponding option in a specific module is set to auto (default).</p>
     <table>
         <tr>
-            <th>Silent Mode</th>
+            <th>Silent mode</th>
         </tr>
         <tr>
             <td>
-                Disables popup error messages from Windows Error Reporting and the module itself.<br><br>
-                <strong>Recommendation:</strong> Disable this mode only when diagnosing module issues is necessary.</td>
+                Disables pop-up error messages from Windows Error Reporting and the module itself.<br><br>
+                <strong>Recommendation:</strong> Disable this mode only when diagnostic troubleshooting of the module is required.</td>
         </tr>
         <tr>
-            <th>Add Header to Log File</th>
-        </tr>
-        <tr>
-            <td>
-                Enables automatic header addition to the log file each time the module starts. Useful when automatic log cleanup is disabled to separate work sessions.</td>
-        </tr>
-        <tr>
-            <th>Maximum Number of Failed Starts</th>
+            <th>Add header to log file</th>
         </tr>
         <tr>
             <td>
-                Defines how many consecutive failed module starts are allowed before the module transitions to the "Error" state.</td>
+                Enables automatic addition of a header to the log file on each module start. Useful when automatic log cleanup is disabled to separate work sessions.</td>
         </tr>
         <tr>
-            <th>Module Health Check Time</th>
-        </tr>
-        <tr>
-            <td>Defines the period for testing module health after its successful launch.<br><br>
-                <strong>Countdown start:</strong> From the moment of successful module start.<br><br>
-                <strong>Transition to "Error" state:</strong> If the module crashes during the test period, it will not be automatically restarted and will transition to the "Error" state. This also applies to cases when the module cannot be started at the system level.<br><br>
-                <strong>Disabling the check:</strong> A value of 0 disables the test period, and the module will always be restarted upon failure.<br><br>
-                <strong>Recommendation:</strong> Do not set the value to 0 or too short a period (less than 30 seconds) as this may lead to infinite restart loops.</td>
-        </tr>
-        <tr>
-            <th>Module Shutdown Timeout</th>
-        </tr>
-        <tr>
-            <td>Defines the maximum time during which the module is allowed to complete its work.<br><br>
-                <strong>Forced termination:</strong> If the module does not complete its work within the specified time, it will be forcibly stopped.<br><br>
-                <strong>Disabling timeout:</strong> A value of 0 disables the waiting period. The program will wait indefinitely for the module to complete its work.<br><br>
-                <strong>Warning:</strong> Forced module termination can lead to data corruption, loss of unsaved changes, or incorrect process termination. Use this setting with caution.</td>
-        </tr>
-        <tr>
-            <th>Maximum Log File Size</th>
+            <th>Maximum number of failed starts</th>
         </tr>
         <tr>
             <td>
-                Maximum log file size in megabytes. When this value is exceeded, the log file will be recreated the next time the module starts.<br><br>
-                Set the value to 0 to clear log files each time the module starts.<br><br>
-                Set the value to 100 MB to completely disable log file cleanup.</td>
+                Determines how many consecutive failed module starts are allowed before it switches to the “Error” state.</td>
         </tr>
         <tr>
-            <th>Terminal Encoding</th>
+            <th>Module health check period</th>
+        </tr>
+        <tr>
+            <td>Defines the period for testing the module’s health after it starts successfully.<br><br>
+                <strong>Start of countdown:</strong> From the moment the module starts successfully.<br><br>
+                <strong>Transition to “Error” state:</strong> If the module crashes during the trial period, it will not be restarted automatically and will switch to the “Error” state. This also applies to cases when the module fails to start at the system level.<br><br>
+                <strong>Disabling the check:</strong> A value of 0 disables the trial period, and the module will always be restarted on failure.<br><br>
+                <strong>Recommendation:</strong> Do not set the value to 0 or too short a period (less than 30 seconds), as this may lead to infinite restart loops.</td>
+        </tr>
+        <tr>
+            <th>Module shutdown timeout</th>
+        </tr>
+        <tr>
+            <td>Defines the maximum time the module is allowed to complete its shutdown.<br><br>
+                <strong>Forced termination:</strong> If the module does not stop within the specified time, it will be forcibly stopped.<br><br>
+                <strong>Disabling the wait:</strong> A value of 0 disables the waiting period. The program will wait indefinitely for the module to stop.<br><br>
+                <strong>Warning:</strong> Forcibly stopping the module may lead to data corruption, loss of unsaved changes, or improper termination of processes. Use this setting with caution.</td>
+        </tr>
+        <tr>
+            <th>Maximum log file size</th>
+        </tr>
+        <tr>
+            <td>
+                Maximum log file size in megabytes. If the specified value is exceeded, the log file will be recreated at the next module start.<br><br>
+                Set the value to 0 to clear logs at each module start.<br><br>
+                Set the value to 100 MB to completely disable log cleanup.</td>
+        </tr>
+        <tr>
+            <th>Terminal encoding</th>
         </tr>
         <tr>
             <td>
                 Terminal encoding when working with the module environment.<br><br>
                 <strong>Special values:</strong><br>
-                - system: Uses system encoding.</td>
+                - system: The system encoding is used.</td>
         </tr>
         <tr>
-            <th>Time Zone</th>
+            <th>Time zone</th>
         </tr>
         <tr>
             <td>
-                Defines the module's time zone in Etc/GMT format (e.g., Etc/GMT-3).<br><br>
+                Defines the module’s time zone in the Etc/GMT format (for example, Etc/GMT-3).<br><br>
                 <strong>Special values:</strong><br>
-                - system: Uses the system time zone.<br><br>
-                <strong>Important:</strong> The Etc/GMT format has reverse offset relative to UTC (e.g., Etc/GMT-3 = UTC/GMT+3 = UTC+03:00 = Europe/Moscow).</td>
+                - system: The system time zone is used.<br><br>
+                <strong>Important:</strong> The Etc/GMT format has an offset reversed relative to UTC (for example, Etc/GMT-3 = UTC/GMT+3 = UTC+03:00 = Europe/Moscow).</td>
         </tr>
         <tr>
-            <th>Addon Environments Used</th>
-        </tr>
-        <tr>
-            <td>
-                Defines a list of addons (space-separated) whose environments (if any) are attached to the module environment. Information indicators in the terminal do not display these additional environments.<br><br>
-                <strong>Warning:</strong> Use this option only when you fully understand its purpose.</td>
-        </tr>
-        <tr>
-            <th>Allowed System Variables</th>
+            <th>Add-on environments to use</th>
         </tr>
         <tr>
             <td>
-                Defines the list of Windows environment variables (space-separated) that are passed to the module environment.<br><br>
-                <strong>Purpose:</strong> Allows isolating the module's working environment from similar software installed in the system.<br><br>
+                Specifies the list of add-ons (separated by spaces) whose environments (if any) are attached to the module environment. Informational indicators in the terminal do not display these additional environments.<br><br>
+                <strong>Warning:</strong> Use this option only if you fully understand its purpose.</td>
+        </tr>
+        <tr>
+            <th>Allowed system variables</th>
+        </tr>
+        <tr>
+            <td>
+                Specifies the list of Windows environment variables (separated by spaces) that are passed into the module environment.<br><br>
+                <strong>Purpose:</strong> Allows isolating the module’s working environment from similar software installed on the system.<br><br>
                 <strong>Warning:</strong> Changing this list without fully understanding its impact may lead to unstable module operation.
             </td>
         </tr>

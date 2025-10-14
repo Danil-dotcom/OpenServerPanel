@@ -44,9 +44,9 @@
 </head>
 
 <body>
-    <h2 style="margin-top: 0.33em">Globale Modulumgebungsvariablen</h2>
-    <p>In diesem Abschnitt können Sie globale Umgebungsvariablen für Module festlegen.<br><br>Diese Variablen werden ausschließlich in der Modulumgebung angewendet und haben keinen Einfluss auf Systemvariablen oder die Projektumgebung. In den Werten können Vorlagenvariablen verwendet werden.</p>
-    <p>Wenn eine Variable in der Systemumgebung vorhanden ist, aber in der Modulumgebung nicht verwendet werden soll, verwenden Sie den speziellen Filter (siehe Module&rarr;Erlaubte Systemvariablen) oder entfernen Sie die Variable aus der Umgebung, indem Sie ihr einen leeren Wert zuweisen.</p>
+    <h2 style="margin-top: 0.33em">Globale Umgebungsvariablen der Module</h2>
+    <p>In diesem Abschnitt können globale Umgebungsvariablen für die Module festgelegt werden.<br><br>Diese Variablen gelten nur in der Modulumgebung und beeinflussen weder die Systemvariablen noch die Projektumgebung.<br><br>In den Werten ist die Verwendung von Vorlagenvariablen zulässig.</p>
+    <p>Wenn eine Variable in der Systemumgebung vorhanden ist, aber nicht in der Modulumgebung verwendet werden soll, verwenden Sie den speziellen Filter (siehe Module&rarr;Zulässige Systemvariablen) oder entfernen Sie die Variable aus der Umgebung, indem Sie ihr einen leeren Wert zuweisen.</p>
     <h2>Vorlagenvariablen</h2>
     <table>
         <tr>
@@ -55,7 +55,7 @@
         </tr>
         <tr>
             <td>{root_dir}</td>
-            <td>Stammverzeichnis des Open Server Panels (vollständiger Pfad)</td>
+            <td>Stammverzeichnis von Open Server Panel (vollständiger Pfad)</td>
         </tr>
         <tr>
             <td>{root_drive}</td>
@@ -63,18 +63,18 @@
         </tr>
         <tr>
             <td>{root_path}</td>
-            <td>Pfad zum Stammverzeichnis des Open Server Panels</td>
+            <td>Pfad zum Stammverzeichnis von Open Server Panel</td>
         </tr>
         <tr>
             <td>{terminal_codepage}</td>
-            <td>Codierung im Terminal (siehe Module&rarr;Terminal-Codierung)</td>
+            <td>Zeichencodierung im Terminal (siehe Module&rarr;Zeichencodierung im Terminal)</td>
         </tr>
         <tr>
             <td>{time_zone}</td>
             <td>Zeitzone im Format Etc/GMT (siehe Module&rarr;Zeitzone)</td>
         </tr>
     </table>
-    <p>Neben Vorlagenvariablen können Sie auch beliebige Windows-Umgebungsvariablen verwenden, wie z.B.: %COMSPEC%, %SYSTEMDRIVE%, %USERNAME%, %PATH% usw.</p>
+    <p>Neben den Vorlagenvariablen können beliebige Windows-Umgebungsvariablen verwendet werden, z. B.: %SYSTEMROOT%, %SYSTEMDRIVE%, %USERNAME%, %PATH% usw.</p>
 </body>
 
 </html>

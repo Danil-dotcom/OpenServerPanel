@@ -44,10 +44,10 @@
 </head>
 
 <body>
-    <h2 style="margin-top: 0.33em">Variabili globali dell'ambiente dei moduli</h2>
-    <p>In questa sezione è possibile definire variabili di ambiente globali per i moduli.<br><br>Queste variabili vengono applicate esclusivamente nell'ambiente dei moduli e non influenzano le variabili di sistema o l'ambiente dei progetti. Nei valori è possibile utilizzare variabili di modello.</p>
-    <p>Se una variabile è presente nell'ambiente di sistema, ma non deve essere utilizzata nell'ambiente dei moduli, utilizzare un filtro speciale (vedi Moduli&rarr;Variabili di sistema consentite) o rimuovere la variabile dall'ambiente assegnandole un valore vuoto.</p>
-    <h2>Variabili di modello</h2>
+    <h2 style="margin-top: 0.33em">Variabili d'ambiente globali dei moduli</h2>
+    <p>In questa sezione è possibile impostare le variabili d'ambiente globali per i moduli.<br><br>Queste variabili sono valide solo nell'ambiente dei moduli e non influiscono sulle variabili di sistema o sull'ambiente dei progetti.<br><br>Nei valori è consentito l'uso di variabili template.</p>
+    <p>Se una variabile è presente nell'ambiente di sistema ma non deve essere utilizzata nell'ambiente dei moduli, utilizzare un filtro speciale (vedi Moduli&rarr;Variabili di sistema consentite) oppure rimuovere la variabile dall'ambiente assegnandole un valore vuoto.</p>
+    <h2>Variabili template</h2>
     <table>
         <tr>
             <th>Variabile</th>
@@ -55,15 +55,15 @@
         </tr>
         <tr>
             <td>{root_dir}</td>
-            <td>Directory principale di Open Server Panel (percorso completo)</td>
+            <td>Directory radice di Open Server Panel (percorso completo)</td>
         </tr>
         <tr>
             <td>{root_drive}</td>
-            <td>Unità della directory principale</td>
+            <td>Unità della directory radice</td>
         </tr>
         <tr>
             <td>{root_path}</td>
-            <td>Percorso alla directory principale di Open Server Panel</td>
+            <td>Percorso alla directory radice di Open Server Panel</td>
         </tr>
         <tr>
             <td>{terminal_codepage}</td>
@@ -74,7 +74,7 @@
             <td>Fuso orario nel formato Etc/GMT (vedi Moduli&rarr;Fuso orario)</td>
         </tr>
     </table>
-    <p>Oltre alle variabili di modello, è possibile utilizzare qualsiasi variabile dell'ambiente Windows, ad esempio: %COMSPEC%, %SYSTEMDRIVE%, %USERNAME%, %PATH%, ecc.</p>
+    <p>Oltre alle variabili template, è possibile utilizzare qualsiasi variabile d'ambiente di Windows, ad esempio: %SYSTEMROOT%, %SYSTEMDRIVE%, %USERNAME%, %PATH% ecc.</p>
 </body>
 
 </html>

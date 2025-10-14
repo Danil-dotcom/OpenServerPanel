@@ -69,64 +69,64 @@
 
 <body>
     <h2 style="margin-top: 0.33em">Impostazioni globali dei moduli</h2>
-    <p>I parametri definiti in questa sezione vengono applicati nei casi in cui nelle impostazioni di un modulo specifico è impostato il valore auto (predefinito) per l'opzione corrispondente.</p>
+    <p>I parametri impostati in questa sezione si applicano nei casi in cui, nelle impostazioni del modulo specifico, per l’opzione corrispondente è impostato il valore auto (predefinito).</p>
     <table>
         <tr>
             <th>Modalità silenziosa</th>
         </tr>
         <tr>
             <td>
-                Disattiva i messaggi popup di errore da Windows Error Reporting e dal modulo stesso.<br><br>
-                <strong>Raccomandazione:</strong> Disattivare questa modalità solo quando è necessario diagnosticare problemi nel funzionamento del modulo.</td>
+                Disattiva i messaggi popup di errore di Windows Error Reporting e del modulo stesso.<br><br>
+                <strong>Raccomandazione:</strong> Disattiva questa modalità solo se necessario per diagnosticare i problemi nel funzionamento del modulo.</td>
         </tr>
         <tr>
-            <th>Aggiungi intestazione al file di registro</th>
-        </tr>
-        <tr>
-            <td>
-                Abilita l'aggiunta automatica di un'intestazione al file di registro ogni volta che il modulo viene avviato. Utile quando la pulizia automatica dei log è disattivata per separare le sessioni di lavoro.</td>
-        </tr>
-        <tr>
-            <th>Numero massimo di avvii falliti</th>
+            <th>Aggiungere intestazione al file di registro</th>
         </tr>
         <tr>
             <td>
-                Determina quanti avvii consecutivi falliti del modulo sono consentiti prima che passi allo stato "Errore".</td>
+                Abilita l’aggiunta automatica di un’intestazione al file di registro a ogni avvio del modulo. Utile quando la pulizia automatica dei log è disattivata per separare le sessioni di lavoro.</td>
         </tr>
         <tr>
-            <th>Tempo di verifica del funzionamento del modulo</th>
+            <th>Numero massimo di avvii non riusciti</th>
         </tr>
         <tr>
-            <td>Determina il periodo di test del funzionamento del modulo dopo il suo avvio riuscito.<br><br>
-                <strong>Inizio del conteggio:</strong> Dal momento dell'avvio riuscito del modulo.<br><br>
-                <strong>Passaggio allo stato "Errore":</strong> Se il modulo termina in modo anomalo durante il periodo di prova, non verrà riavviato automaticamente e passerà allo stato "Errore". Questo vale anche per i casi in cui il modulo non può essere avviato a livello di sistema.<br><br>
-                <strong>Disattivazione della verifica:</strong> Il valore 0 disattiva il periodo di prova, e il modulo verrà sempre riavviato in caso di fallimento.<br><br>
-                <strong>Raccomandazione:</strong> Non impostare il valore su 0 o un periodo troppo breve (meno di 30 secondi), poiché ciò potrebbe causare cicli di riavvio infiniti.</td>
+            <td>
+                Determina quanti avvii consecutivi non riusciti del modulo sono consentiti prima che passi allo stato «Errore».</td>
         </tr>
         <tr>
-            <th>Tempo di attesa per la terminazione del modulo</th>
+            <th>Tempo di verifica dell’operatività del modulo</th>
         </tr>
         <tr>
-            <td>Determina il tempo massimo entro il quale il modulo è autorizzato a terminare il proprio funzionamento.<br><br>
-                <strong>Terminazione forzata:</strong> Se il modulo non termina entro il tempo specificato, verrà arrestato forzatamente.<br><br>
-                <strong>Disattivazione dell'attesa:</strong> Il valore 0 disattiva il periodo di attesa. Il programma attenderà indefinitamente il completamento del modulo.<br><br>
-                <strong>Avvertenza:</strong> L'arresto forzato del modulo può portare a danni ai dati, perdita di modifiche non salvate o terminazione impropria dei processi. Utilizzare questa impostazione con cautela.</td>
+            <td>Determina il periodo di test dell’operatività del modulo dopo il suo avvio riuscito.<br><br>
+                <strong>Inizio del conteggio:</strong> Dal momento dell’avvio riuscito del modulo.<br><br>
+                <strong>Passaggio allo stato «Errore»:</strong> Se il modulo si arresta in modo anomalo durante il periodo di prova, non verrà riavviato automaticamente e passerà allo stato «Errore». Ciò vale anche nei casi in cui il modulo non riesce ad avviarsi a livello di sistema.<br><br>
+                <strong>Disattivazione del controllo:</strong> Il valore 0 disattiva il periodo di prova e il modulo verrà sempre riavviato in caso di errore.<br><br>
+                <strong>Raccomandazione:</strong> Non impostare il valore 0 o un periodo troppo breve (meno di 30 secondi), poiché ciò può portare a cicli di riavvio infiniti.</td>
+        </tr>
+        <tr>
+            <th>Tempo di attesa per l’arresto del modulo</th>
+        </tr>
+        <tr>
+            <td>Determina il tempo massimo durante il quale al modulo è consentito terminare il proprio lavoro.<br><br>
+                <strong>Arresto forzato:</strong> Se il modulo non termina entro il tempo indicato, verrà arrestato forzatamente.<br><br>
+                <strong>Disattivazione dell’attesa:</strong> Il valore 0 disattiva il periodo di attesa. Il programma attenderà la terminazione del modulo per un tempo illimitato.<br><br>
+                <strong>Avvertenza:</strong> L’arresto forzato del modulo può causare danneggiamento dei dati, perdita di modifiche non salvate o terminazioni non corrette dei processi. Utilizzare questa impostazione con cautela.</td>
         </tr>
         <tr>
             <th>Dimensione massima del file di registro</th>
         </tr>
         <tr>
             <td>
-                Dimensione massima del file di registro in megabyte. Quando viene superato il valore specificato, il file di log verrà ricreato al successivo avvio del modulo.<br><br>
-                Impostare il valore su 0 per cancellare i file di log ad ogni avvio del modulo.<br><br>
-                Impostare il valore su 100 MB per disattivare completamente la pulizia dei file di log.</td>
+                Dimensione massima del file di registro in megabyte. Al superamento del valore indicato, il file di log verrà ricreato al successivo avvio del modulo.<br><br>
+                Impostare il valore 0 per pulire i registri a ogni avvio del modulo.<br><br>
+                Impostare il valore 100 MB per disattivare completamente la pulizia dei registri.</td>
         </tr>
         <tr>
             <th>Codifica del terminale</th>
         </tr>
         <tr>
             <td>
-                Codifica del terminale quando si lavora con l'ambiente del modulo.<br><br>
+                Codifica del terminale durante il lavoro con l’ambiente del modulo.<br><br>
                 <strong>Valori speciali:</strong><br>
                 - system: Viene utilizzata la codifica di sistema.</td>
         </tr>
@@ -138,24 +138,24 @@
                 Determina il fuso orario del modulo nel formato Etc/GMT (ad esempio, Etc/GMT-3).<br><br>
                 <strong>Valori speciali:</strong><br>
                 - system: Viene utilizzato il fuso orario di sistema.<br><br>
-                <strong>Importante:</strong> Il formato Etc/GMT ha uno spostamento inverso rispetto a UTC (ad esempio, Etc/GMT-3 = UTC/GMT+3 = UTC+03:00 = Europe/Moscow).</td>
+                <strong>Importante:</strong> Il formato Etc/GMT ha uno scostamento inverso rispetto a UTC (ad esempio, Etc/GMT-3 = UTC/GMT+3 = UTC+03:00 = Europe/Moscow).</td>
         </tr>
         <tr>
-            <th>Ambienti dei componenti aggiuntivi utilizzati</th>
+            <th>Ambientì degli addon utilizzati</th>
         </tr>
         <tr>
             <td>
-                Determina l'elenco dei componenti aggiuntivi (separati da spazi) i cui ambienti (se esistenti) vengono uniti all'ambiente del modulo. Gli indicatori informativi nel terminale non mostrano questi ambienti aggiuntivi.<br><br>
-                <strong>Avvertenza:</strong> Utilizzare questa opzione solo con una piena comprensione del suo scopo.</td>
+                Determina l’elenco degli addon (indicati separati da spazio) i cui ambienti (se presenti) vengono uniti all’ambiente del modulo. Gli indicatori informativi nel terminale non mostrano questi ambienti aggiuntivi.<br><br>
+                <strong>Avvertenza:</strong> Utilizzare questa opzione solo avendo piena comprensione del suo scopo.</td>
         </tr>
         <tr>
             <th>Variabili di sistema consentite</th>
         </tr>
         <tr>
             <td>
-                Determina l'elenco delle variabili dell'ambiente Windows (separate da spazi) che vengono trasferite all'ambiente del modulo.<br><br>
-                <strong>Scopo:</strong> Consente di isolare l'ambiente di lavoro del modulo da software simile installato nel sistema.<br><br>
-                <strong>Avvertenza:</strong> La modifica di questo elenco senza una piena comprensione della sua influenza può portare a un funzionamento instabile del modulo.
+                Determina l’elenco delle variabili d’ambiente di Windows (indicate separate da spazio) che vengono passate all’ambiente del modulo.<br><br>
+                <strong>Scopo:</strong> Consente di isolare l’ambiente di lavoro del modulo dal software analogo installato nel sistema.<br><br>
+                <strong>Avvertenza:</strong> Modificare questo elenco senza una piena comprensione del suo impatto può portare a un funzionamento instabile del modulo.
             </td>
         </tr>
     </table>

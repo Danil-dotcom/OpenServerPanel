@@ -44,61 +44,61 @@
 </head>
 
 <body>
-    <h2 style="margin-top: 0.33em">Cài đặt toàn cục của dự án</h2>
-    <p>Các tham số được thiết lập trong phần này được sử dụng khi không có giá trị khác được chỉ định trong cài đặt dự án.</p>
+    <h2 style="margin-top: 0.33em">Cài đặt chung cho dự án</h2>
+    <p>Các tham số được đặt trong phần này sẽ được sử dụng nếu không có giá trị khác được chỉ định trong cài đặt của dự án.</p>
     <table>
         <tr>
             <th>HTTP</th>
         </tr>
         <tr>
             <td>
-                Định nghĩa loại máy chủ web được sử dụng cho các dự án.</td>
+                Xác định module máy chủ web được sử dụng cho các dự án.</td>
         </tr>
         <tr>
             <th>NODE</th>
         </tr>
         <tr>
             <td>
-                Chỉ định công cụ Node.js để chạy các ứng dụng Node.js.<br><br>
-                <strong>Cài đặt Node.js:</strong> Trước tiên hãy cài đặt phiên bản Node.js cần thiết bằng addon NVM.</td>
+                Chỉ định engine Node.js để chạy các ứng dụng Node.js.<br><br>
+                <strong>Cài đặt Node.js:</strong> Trước tiên hãy cài đặt phiên bản Node.js cần thiết bằng lệnh <b>osp node &lt;latest|lts|номер&gt;</b>.</td>
         </tr>
         <tr>
             <th>PHP</th>
         </tr>
         <tr>
             <td>
-                Định nghĩa công cụ PHP được sử dụng để xử lý các tệp PHP.</td>
+                Xác định module PHP được sử dụng để xử lý các tệp PHP.</td>
         </tr>
         <tr>
-            <th>Kích hoạt</th>
-        </tr>
-        <tr>
-            <td>
-                Định nghĩa trạng thái mặc định của dự án (được kích hoạt hoặc bị vô hiệu hóa).</td>
-        </tr>
-        <tr>
-            <th>Mã hóa terminal</th>
+            <th>Bật</th>
         </tr>
         <tr>
             <td>
-                Mã hóa terminal khi làm việc với môi trường dự án.<br><br>
+                Xác định trạng thái mặc định của dự án (bật hoặc tắt).</td>
+        </tr>
+        <tr>
+            <th>Bảng mã terminal</th>
+        </tr>
+        <tr>
+            <td>
+                Bảng mã terminal khi làm việc với môi trường dự án.<br><br>
                 <strong>Giá trị đặc biệt:</strong><br>
-                - system: Sử dụng mã hóa hệ thống.<br><br>
-                <strong>Quan trọng:</strong> Nếu giá trị không được thiết lập, khi hình thành môi trường dự án cuối cùng, mã hóa terminal sẽ được thiết lập bởi môi trường được kết nối cuối cùng nơi nó được định nghĩa, ví dụ, môi trường module PHP.</td>
+                - system: Sử dụng bảng mã hệ thống.<br><br>
+                <strong>Quan trọng:</strong> Nếu giá trị không được đặt, khi hình thành môi trường cuối cùng của dự án, bảng mã terminal sẽ được đặt bởi môi trường được nạp cuối cùng có thiết lập này, ví dụ như môi trường của module PHP.</td>
         </tr>
         <tr>
             <th>IP</th>
         </tr>
         <tr>
             <td>
-                Thiết lập (các) địa chỉ IP được sử dụng bởi tất cả các dự án không có cài đặt cá nhân.<br><br>
-                <strong>Hạn chế:</strong> Các dự án sử dụng cùng một địa chỉ IP phải chạy trên cùng một phiên bản PHP.<br><br>
-                <strong>Hỗ trợ nhiều IP:</strong> Bạn có thể chỉ định nhiều địa chỉ IP cách nhau bằng dấu cách, bao gồm IPv6. Trong tệp HOSTS, các tên miền sẽ được gán IP đầu tiên được chỉ định.<br><br>
-                <strong>Gán tự động:</strong> Nếu bạn để trống trường này, địa chỉ IP sẽ được gán tự động.<br><br>
+                Chỉ định địa chỉ IP được sử dụng bởi tất cả các dự án không có cài đặt riêng.<br><br>
+                <strong>Giới hạn:</strong> Các dự án sử dụng cùng một địa chỉ IP phải chạy trên cùng một phiên bản PHP.<br><br>
+                <strong>Hỗ trợ nhiều IP:</strong> Có thể chỉ định nhiều địa chỉ IP cách nhau bằng khoảng trắng, bao gồm cả IPv6. Trong tệp HOSTS, các tên miền sẽ được gán IP đầu tiên được chỉ định.<br><br>
+                <strong>Gán tự động:</strong> Nếu để trống, địa chỉ IP sẽ được gán tự động.<br><br>
                 <strong>Khuyến nghị:</strong>
                 <ul>
-                    <li>Quản lý địa chỉ IP tự động được khuyến nghị cho hầu hết người dùng.</li>
-                    <li>Thiết lập địa chỉ IP thủ công chỉ nên được sử dụng cho các yêu cầu cấu hình mạng cụ thể.</li>
+                    <li>Quản lý IP tự động được khuyến nghị cho hầu hết người dùng.</li>
+                    <li>Chỉ nên đặt IP thủ công khi có yêu cầu cấu hình mạng đặc thù.</li>
                 </ul>
             </td>
         </tr>
@@ -107,79 +107,79 @@
         </tr>
         <tr>
             <td>
-                Định nghĩa cổng cho các kết nối HTTP.</td>
+                Xác định cổng cho kết nối HTTP.</td>
         </tr>
         <tr>
             <th>HTTPS</th>
         </tr>
         <tr>
             <td>
-                Định nghĩa cổng cho các kết nối HTTPS.</td>
+                Xác định cổng cho kết nối HTTPS.</td>
         </tr>
         <tr>
-            <th>SSL</th>
+            <th>TLS</th>
         </tr>
         <tr>
             <td>
-                Kích hoạt hoặc vô hiệu hóa hỗ trợ SSL cho các dự án không có cài đặt cá nhân.</td>
+                Bật hoặc tắt hỗ trợ TLS.</td>
         </tr>
         <tr>
             <th>H2</th>
         </tr>
         <tr>
             <td>
-                Kích hoạt hoặc vô hiệu hóa hỗ trợ HTTP/2 cho các dự án không có cài đặt cá nhân.</td>
+                Bật hoặc tắt hỗ trợ giao thức HTTP/2.</td>
         </tr>
         <tr>
             <th>Tệp chứng chỉ</th>
         </tr>
         <tr>
             <td>
-                Chỉ định đường dẫn đến tệp chứng chỉ SSL. Có thể sử dụng các biến mẫu.<br><br>
-                <strong>Ký tự được phép:</strong> A-Za-z0-9-+_.\:<br><br>
-                <strong>Khuyến nghị:</strong> Để trống trường này để tự động tạo chứng chỉ.</td>
+                Chỉ định đường dẫn đến tệp chứng chỉ TLS. Có thể sử dụng biến mẫu.<br><br>
+                <strong>Ký tự hợp lệ:</strong> A-Za-z0-9-+_.\:<br><br>
+                <strong>Khuyến nghị:</strong> Để trống để tự động tạo chứng chỉ.</td>
         </tr>
         <tr>
             <th>Tệp khóa</th>
         </tr>
         <tr>
             <td>
-                Chỉ định đường dẫn đến tệp khóa SSL. Có thể sử dụng các biến mẫu.<br><br>
-                <strong>Ký tự được phép:</strong> A-Za-z0-9-+_.\:<br><br>
-                <strong>Khuyến nghị:</strong> Để trống trường này để tự động tạo khóa.</td>
+                Chỉ định đường dẫn đến tệp khóa TLS. Có thể sử dụng biến mẫu.<br><br>
+                <strong>Ký tự hợp lệ:</strong> A-Za-z0-9-+_.\:<br><br>
+                <strong>Khuyến nghị:</strong> Để trống để tự động tạo khóa.</td>
         </tr>
         <tr>
             <th>Địa chỉ IP (backend)</th>
         </tr>
         <tr>
-            <td>Chỉ định địa chỉ IP để kết nối với backend.</td>
+            <td>Chỉ định địa chỉ IP dùng để kết nối đến phần máy chủ (Backend).</td>
         </tr>
         <tr>
             <th>Cổng (backend)</th>
         </tr>
         <tr>
-            <td>Định nghĩa số cổng để kết nối với backend.</td>
+            <td>Xác định số cổng để kết nối đến phần máy chủ (Backend).</td>
         </tr>
         <tr>
-            <th>Kích hoạt (backend)</th>
+            <th>Bật (backend)</th>
         </tr>
         <tr>
-            <td>Cho phép chuyển hướng tự động tất cả lưu lượng đầu vào của dự án (HTTP và HTTPS) đến backend. Hữu ích cho việc kiểm tra hoặc phát triển khi frontend và backend được tách biệt.</td>
+            <td>Cho phép tự động chuyển hướng toàn bộ lưu lượng vào (HTTP và HTTPS) của dự án đến phần máy chủ (Backend). Hữu ích cho thử nghiệm hoặc phát triển khi frontend và backend tách rời.</td>
         </tr>
         <tr>
             <th>Thư mục dự án</th>
         </tr>
         <tr>
             <td>
-                Chỉ định thư mục gốc của dự án. Việc điều hướng đến thư mục này được thực hiện bằng lệnh <strong>osp project &lt;DOMAIN&gt;</strong> cùng với việc kích hoạt môi trường dự án. Có thể sử dụng các biến mẫu.<br><br>
+                Chỉ định thư mục gốc của dự án. Chuyển đến thư mục này bằng lệnh <strong>osp project &lt;DOMAIN&gt;</strong> đồng thời kích hoạt môi trường dự án. Có thể sử dụng biến mẫu.<br><br>
                 <strong>Ký tự được phép:</strong> A-Za-z0-9-+_.\:</td>
         </tr>
         <tr>
-            <th>Thư mục công khai</th>
+            <th>Thư mục public</th>
         </tr>
         <tr>
             <td>
-                Định nghĩa thư mục công khai của dự án. Có thể sử dụng các biến mẫu.<br><br>
+                Xác định thư mục public của dự án. Có thể sử dụng biến mẫu.<br><br>
                 <strong>Ký tự được phép:</strong> A-Za-z0-9-+_.\:</td>
         </tr>
         <tr>
@@ -187,32 +187,31 @@
         </tr>
         <tr>
             <td>
-                Chỉ định các tên miền bổ sung (bí danh) cho dự án (cách nhau bằng dấu cách). Có thể sử dụng các biến mẫu.<br><br>
-                <strong>Tên miền phụ:</strong> Nếu một bí danh không chứa dấu chấm, nó được coi là một tên miền phụ (ví dụ: "www" -> "www.test.local").<br><br>
-                <strong>Hạn chế:</strong> Ký hiệu "*" không được hỗ trợ bởi tệp HOSTS của Windows và yêu cầu cấu hình DNS.</td>
+                Chỉ định các tên miền bổ sung (alias) cho dự án (cách nhau bằng khoảng trắng). Có thể sử dụng biến mẫu.<br><br>
+                <strong>Hạn chế:</strong> Ký tự "*" không được tệp HOSTS trong Windows hỗ trợ và cần cấu hình DNS.</td>
         </tr>
         <tr>
             <th>Môi trường dự án</th>
         </tr>
         <tr>
             <td>
-                Danh sách các addon và module (cách nhau bằng dấu cách) tạo thành môi trường dự án.<br><br>
-                <strong>Module PHP/Nginx/Node.js:</strong> Môi trường của các module này luôn được kết nối (nếu được chỉ định cho tên miền) và không yêu cầu chỉ định trong tham số này.</td>
+                Danh sách các tiện ích bổ sung và module (cách nhau bằng khoảng trắng) tạo nên môi trường của dự án.<br><br>
+                <strong>HTTP, NODE và PHP:</strong> Môi trường của các engine này luôn được nạp (nếu được đặt cho domain) và không cần chỉ định trong tham số này.</td>
         </tr>
         <tr>
-            <th>Lệnh khởi động dự án</th>
-        </tr>
-        <tr>
-            <td>
-                Định nghĩa lệnh để khởi động dự án (ví dụ: <strong>nodemon app.js</strong>). Có thể sử dụng các biến mẫu.</td>
-        </tr>
-        <tr>
-            <th>URL dự án</th>
+            <th>Lệnh khởi chạy dự án</th>
         </tr>
         <tr>
             <td>
-                URL được mở khi chọn <strong>Mở dự án trong trình duyệt</strong> trong Open Server Panel. Có thể sử dụng các biến mẫu.<br><br>
-                <strong>Ứng dụng:</strong> Bạn có thể thiết lập URL của bảng quản trị CMS.</td>
+                Xác định lệnh để khởi chạy dự án (ví dụ, <strong>nodemon app.js</strong>). Có thể sử dụng biến mẫu.</td>
+        </tr>
+        <tr>
+            <th>URL của dự án</th>
+        </tr>
+        <tr>
+            <td>
+                URL được sử dụng khi mở dự án <strong>Menu&rarr;Dự án&rarr;Mở trong trình duyệt</strong>, cũng như khi mở các alias của dự án. Có thể sử dụng biến mẫu.<br><br>
+                <strong>Ứng dụng:</strong> Có thể đặt URL của trang quản trị CMS.</td>
         </tr>
     </table>
     <h2>Biến mẫu</h2>
@@ -226,19 +225,23 @@
         <tbody>
             <tr>
                 <td>{backend_ip}</td>
-                <td>Địa chỉ IP kết nối backend</td>
+                <td>Địa chỉ IP kết nối đến phần máy chủ (Backend)</td>
             </tr>
             <tr>
                 <td>{backend_port}</td>
-                <td>Cổng kết nối backend</td>
+                <td>Cổng kết nối đến phần máy chủ (Backend)</td>
             </tr>
             <tr>
                 <td>{base_dir}</td>
-                <td>Thư mục gốc của dự án (nơi thư mục .osp được đặt)</td>
+                <td>Thư mục gốc của dự án (nơi chứa thư mục .osp)</td>
+            </tr>
+            <tr>
+                <td>{date_time}</td>
+                <td>Ngày/giờ hiện tại (biến chỉ khả dụng cho lệnh khởi chạy ứng dụng của dự án)</td>
             </tr>
             <tr>
                 <td>{host}</td>
-                <td>Tên miền (Punycode được sử dụng cho các tên miền quốc tế)</td>
+                <td>Tên miền (đối với tên miền quốc tế hóa sử dụng Punycode)</td>
             </tr>
             <tr>
                 <td>{host_decoded}</td>
@@ -246,55 +249,55 @@
             </tr>
             <tr>
                 <td>{host_scheme}</td>
-                <td>Sơ đồ yêu cầu dự án ("http" hoặc "https", phụ thuộc vào tham số SSL trong cài đặt dự án)</td>
+                <td>Lược đồ yêu cầu tới dự án ("http" hoặc "https", phụ thuộc vào tham số TLS trong cài đặt dự án)</td>
             </tr>
             <tr>
                 <td>{http_port}</td>
-                <td>Cổng yêu cầu dự án qua giao thức HTTP</td>
+                <td>Cổng yêu cầu tới dự án qua giao thức HTTP</td>
             </tr>
             <tr>
                 <td>{https_port}</td>
-                <td>Cổng yêu cầu dự án qua giao thức HTTPS</td>
+                <td>Cổng yêu cầu tới dự án qua giao thức HTTPS</td>
             </tr>
             <tr>
-                <td>{web_engine}</td>
-                <td>Công cụ HTTP</td>
+                <td>{http_engine}</td>
+                <td>Engine HTTP</td>
             </tr>
             <tr>
                 <td>{node_engine}</td>
-                <td>Công cụ NODE</td>
+                <td>Engine NODE</td>
             </tr>
             <tr>
                 <td>{php_engine}</td>
-                <td>Công cụ PHP</td>
+                <td>Engine PHP</td>
             </tr>
             <tr>
-                <td>{project_dir}</td>
+                <td>{project_root}</td>
                 <td>Thư mục gốc của dự án</td>
             </tr>
             <tr>
-                <td>{public_dir}</td>
-                <td>Thư mục công khai của dự án</td>
+                <td>{web_root}</td>
+                <td>Thư mục public của dự án</td>
             </tr>
             <tr>
                 <td>{scheme_port}</td>
-                <td>Cổng yêu cầu dự án (":{http_port}" hoặc ":{https_port}", phụ thuộc vào tham số SSL trong cài đặt dự án).<br><br>Nếu {http_port} hoặc {https_port} có giá trị tiêu chuẩn 80 hoặc 443, thì {scheme_port} sẽ trống.</td>
+                <td>Cổng yêu cầu tới dự án (":{http_port}" hoặc ":{https_port}", phụ thuộc vào tham số TLS trong cài đặt dự án).<br><br>Nếu {http_port} hoặc {https_port} có giá trị tiêu chuẩn 80 hoặc 443, thì {scheme_port} sẽ trống.</td>
             </tr>
             <tr>
                 <td>{root_dir}</td>
-                <td>Thư mục gốc Open Server Panel (đường dẫn đầy đủ)</td>
+                <td>Thư mục gốc của Open Server Panel (đường dẫn đầy đủ)</td>
             </tr>
             <tr>
                 <td>{root_drive}</td>
-                <td>Ổ đĩa thư mục gốc</td>
+                <td>Ổ đĩa của thư mục gốc</td>
             </tr>
             <tr>
                 <td>{root_path}</td>
-                <td>Đường dẫn đến thư mục gốc Open Server Panel</td>
+                <td>Đường dẫn đến thư mục gốc của Open Server Panel</td>
             </tr>
             <tr>
                 <td>{terminal_codepage}</td>
-                <td>Mã hóa console</td>
+                <td>Bảng mã console</td>
             </tr>
         </tbody>
     </table>

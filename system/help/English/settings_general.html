@@ -44,35 +44,35 @@
 </head>
 
 <body>
-    <h2 style="margin-top: 0.33em">Program Settings</h2>
+    <h2 style="margin-top: 0.33em">Program settings</h2>
     <table>
         <tr>
-            <th>Run with Windows</th>
+            <th>Start with Windows</th>
         </tr>
         <tr>
             <td>
-                Enable automatic startup of Open Server Panel when the operating system loads.</td>
+                Enable Open Server Panel autorun when the operating system loads.</td>
         </tr>
         <tr>
             <th>Delay</th>
         </tr>
         <tr>
             <td>
-                Program startup delay (in seconds, from 0 to 60).<br><br>Allows postponing the application launch to reduce system load during startup. This is especially useful if you need to wait for full initialization of third-party services or network interfaces.</td>
+                Program startup delay (in seconds, from 0 to 60).<br><br>Allows you to postpone the app start during Windows startup to reduce overall system load. This is especially useful if you need to wait for full initialization of third-party services or network interfaces.</td>
         </tr>
         <tr>
             <th>Check for new versions</th>
         </tr>
         <tr>
             <td>
-                Enable update checking for Open Server Panel (internet connection required).</td>
+                Enable Open Server Panel updates check (Internet connection required).</td>
         </tr>
         <tr>
             <th>Enable task scheduler</th>
         </tr>
         <tr>
             <td>
-                Activate the built-in task scheduler. If this parameter is disabled, no scheduled tasks will be executed regardless of their status.</td>
+                Activate the built-in task scheduler. If this option is disabled, no scheduled tasks will be executed regardless of their status.</td>
         </tr>
         <tr>
             <th>Use HOSTS file</th>
@@ -80,54 +80,54 @@
         <tr>
             <td>
                 Enable writing domain names to the HOSTS file.<br><br>
-                <strong>Recommendations for restricted access to HOSTS file in organizations:</strong><br><br>
-                1. Configure all necessary modules and projects.<br>
-                2. Contact your system administrator to unblock HOSTS and fix its state.<br>
-                3. After the administrator has fixed the changes, you can disable this option.<br><br>
-                <strong>Important:</strong> Do not disable this parameter if you are unsure of the consequences!</td>
+                <strong>Recommendations when access to the HOSTS file is restricted in your organization:</strong><br><br>
+                1. Configure all required modules and projects.<br>
+                2. Contact your system administrator to unblock HOSTS and lock in its state.<br>
+                3. After the administrator finalizes the changes, you can disable this option.<br><br>
+                <strong>Important:</strong> Do not disable this option unless you are sure of the consequences!</td>
         </tr>
         <tr>
-            <th>Launch modules with project profile</th>
+            <th>Start modules with project profile</th>
         </tr>
         <tr>
-            <td>Launch modules with simultaneous activation of a profile matching the project name.<br><br>Used when selecting the "Enable project modules" menu item to automatically activate a profile with the same name as the current project, if one exists.</td>
+            <td>Start modules while simultaneously activating the profile that matches the project name.<br><br>Used when selecting the “Enable project modules” menu item to automatically activate the profile with the same name as the current project, if it exists.</td>
         </tr>
         <tr>
-            <th>Do not disable modules of hidden projects</th>
+            <th>Do not stop modules of hidden projects</th>
         </tr>
         <tr>
-            <td>Do not disable modules of hidden projects when selecting the menu item "Disable all modules". "Hidden" refers to projects that have been assigned the "hidden" category.<br><br>By default, the "Disable all modules" command stops the operation of absolutely all modules, including those used by service projects (for example, PHPMyAdmin). This option allows you to maintain the functionality of hidden service projects by not disabling the modules necessary for them, while all other modules will be turned off.</td>
+            <td>Do not stop modules of hidden projects when selecting the “Disable all modules” menu item. By "hidden" we mean projects for which the "hidden" category is set.<br><br>By default, the “Disable all modules” command stops absolutely all modules, including those used by hidden service projects (for example, PHPMyAdmin). This option allows you to keep hidden service projects operational without disabling the modules they require, while all other modules will be turned off.</td>
         </tr>
         <tr>
             <th>Interface language</th>
         </tr>
         <tr>
             <td>
-                User interface language for Open Server Panel.<br><br>
+                The Open Server Panel user interface language.<br><br>
                 If the localization file is missing or contains errors, English will be used.</td>
         </tr>
         <tr>
-            <th>API Domain</th>
+            <th>API domain</th>
         </tr>
         <tr>
             <td>
-                Local domain for API and web interface (in development)<br><br>
-                <strong>Recommendation:</strong> If using VPN or proxy, add this domain to exceptions.</td>
+                Local domain for the API and web interface (in development)<br><br>
+                <strong>Recommendation:</strong> If a VPN or proxy is used, add this domain to the exclusions.</td>
         </tr>
         <tr>
-            <th>API IP Address</th>
-        </tr>
-        <tr>
-            <td>
-                IPv4 address for API and web interface (in development).<br><br>
-                <strong>Recommendation:</strong> If using VPN or proxy, add this IP address to exceptions.</td>
-        </tr>
-        <tr>
-            <th>API Port</th>
+            <th>API IP address</th>
         </tr>
         <tr>
             <td>
-                Port used for API and web interface (in development). Open Server Panel will not be able to start if the specified port is already in use by another application.</td>
+                IPv4 address for the API and web interface (in development).<br><br>
+                <strong>Recommendation:</strong> If a VPN or proxy is used, add this IP address to the exclusions.</td>
+        </tr>
+        <tr>
+            <th>API port</th>
+        </tr>
+        <tr>
+            <td>
+                The port used for the API and web interface (in development). Open Server Panel will not be able to start if the specified port is already used by another application.</td>
         </tr>
         <tr>
             <th>Use Windows Terminal</th>
@@ -135,58 +135,58 @@
         <tr>
             <td>
                 Enable using Windows Terminal instead of the standard command interface.<br><br>
-                <strong>Requirements:</strong> Windows Terminal must be installed on the system and defined in the PATH environment variable.<br><br>
-                <strong>Windows Terminal as cmd.exe:</strong> Windows Terminal can replace cmd.exe and be defined in the %COMSPEC% environment variable in newer versions of Windows. If this is the case, keep this option enabled.<br><br>
-                <strong>New Windows Terminal instances:</strong> If Windows Terminal opens new windows instead of tabs, configure it as follows: Settings&rarr;Startup&rarr;New instance behavior&rarr;Attach to the most recently used window.</td>
+                <strong>Requirements:</strong> Windows Terminal must be installed in the system and present in the PATH environment variable.<br><br>
+                <strong>Windows Terminal as cmd.exe:</strong> Windows Terminal can replace cmd.exe and be set in the %COMSPEC% environment variable in newer versions of Windows. If so, leave this option enabled.<br><br>
+                <strong>New Windows Terminal instances:</strong> If Windows Terminal opens new windows instead of tabs, configure it as follows: Settings&rarr;Startup&rarr;New instance behavior&rarr;Attach to most recently used window.</td>
         </tr>
         <tr>
             <th>Short project title</th>
         </tr>
         <tr>
             <td>
-                When this option is activated, only the project name will be displayed in the terminal window title instead of a detailed description.</td>
+                When this option is enabled, only the project name will be shown in the terminal window title instead of a detailed environment description.</td>
         </tr>
         <tr>
-            <th>Include system environment in project environment</th>
+            <th>Include system environment in the project environment</th>
         </tr>
         <tr>
-            <td>Use the system environment (System) in the terminal even if it is not specified in the project settings. System environment allows the use of programs installed on the system (such as git.exe or ssh.exe).<br><br>Disable this option only if conflicts with system software occur.</td>
+            <td>Use the system (System) environment in the terminal even if it is not set in the project settings. The system environment allows you to use programs installed in the system (for example, git.exe or ssh.exe).<br><br>Disable this option only if conflicts with system software occur.</td>
         </tr>
         <tr>
             <th>ANSI support</th>
         </tr>
         <tr>
             <td>
-                Enable support for ANSI codes to control colors in the terminal.<br><br>
+                Enable ANSI code support for color control in the terminal.<br><br>
                 "Automatic" mode (default):<br>
-                - The fix is applied only to Windows 7, 8, and Windows 10 (up to version 1903 inclusive). In newer Windows versions, ANSI code support is already built-in.<br>
-                - The fix is not applied to terminals that support ANSI by default (e.g., Windows Terminal).
+                - The fix is applied only to Windows 10 up to and including version 1903. In newer versions of Windows, ANSI code support is already built-in.<br>
+                - The fix is not applied to terminals that support ANSI by default (for example, Windows Terminal).
             </td>
         </tr>
         <tr>
-            <th>Project search directories</th>
+            <th>Directories for searching projects</th>
         </tr>
         <tr>
             <td>
-                List of directories where Open Server Panel will search for projects. Separate paths with semicolons (;).<br><br>
-                <strong>Exclusions:</strong> Subdirectories node_modules and vendor are ignored.</td>
+                A list of directories where Open Server Panel will search for projects. Separate paths with a semicolon (;).<br><br>
+                <strong>Exclusions:</strong> The node_modules and vendor subdirectories are ignored.</td>
         </tr>
         <tr>
             <th>Depth</th>
         </tr>
         <tr>
             <td>
-                Maximum directory nesting depth when searching for projects.<br><br>
-                Increasing this value may slow down the Open Server Panel startup if the specified directories contain a large number of subdirectories.</td>
+                The maximum directory nesting depth when searching for projects.<br><br>
+                Increasing this value may slow down the startup of Open Server Panel if the specified directories contain a large number of subdirectories.</td>
         </tr>
         <tr>
             <th>Maximum log file size</th>
         </tr>
         <tr>
             <td>
-                Maximum log file size in megabytes. When the specified value is exceeded, the log file will be recreated the next time the program starts.<br><br>
-                Set the value to 0 to clear log files on each program start.<br><br>
-                Set the value to 100 MB to completely disable log file cleaning.</td>
+                The maximum log file size in megabytes. If the specified value is exceeded, the log file will be recreated at the next program startup.<br><br>
+                Set the value to 0 to clear logs at every program startup.<br><br>
+                Set the value to 100 MB to completely disable log clearing.</td>
         </tr>
     </table>
 </body>

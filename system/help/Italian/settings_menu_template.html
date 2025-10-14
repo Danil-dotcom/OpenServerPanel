@@ -79,56 +79,56 @@
 <body>
     <h2 style="margin-top: 0.33em">Creazione di voci di menu personalizzate</h2>
     <ol>
-        <li>Aggiungere una nuova sezione con un identificatore univoco [ID]</li>
-        <li>Disporre le sezioni nell'ordine desiderato — questo determinerà l'ordine delle voci nel menu</li>
-        <li>Salvare le modifiche e riavviare Open Server Panel per applicare le modifiche</li>
+        <li>Aggiungi una nuova sezione con un identificatore univoco [ID]</li>
+        <li>Disponi le sezioni nell’ordine desiderato: questo determinerà l’ordine delle voci nel menu</li>
+        <li>Salva le modifiche e riavvia Open Server Panel per applicarle</li>
     </ol>
     <div class="bs-callout bs-callout-info">
         <h3>Informazioni importanti</h3>
-        Quando si creano voci di menu personalizzate, assicurarsi che gli identificatori delle sezioni non siano duplicati. Questo può portare a conflitti nella funzionalità del menu.
+        Quando crei voci di menu personalizzate, assicurati che gli identificatori delle sezioni non si ripetano. Ciò può causare conflitti nel funzionamento del menu.
     </div>
     <h2>Impostazioni delle voci di menu</h2>
-    <p><strong>Ordine di ordinamento:</strong> Le voci del menu vengono ordinate nello stesso ordine delle sezioni corrispondenti nel modello.</p>
+    <p><strong>Ordine di ordinamento:</strong> Le voci di menu vengono ordinate nello stesso ordine in cui sono disposte le sezioni corrispondenti nel template.</p>
     <table class="table table-striped table-bordered">
         <tbody>
             <tr>
                 <th>caption</th>
                 <td>
-                    Titolo della voce di menu. Supporta costanti di lingua nel formato {lang_xxx}.<br><br>
+                    Titolo della voce di menu. Supporta le costanti di lingua nel formato {lang_xxx}.<br><br>
                     Predefinito: non impostato
                 </td>
             </tr>
             <tr>
                 <th>category</th>
                 <td>
-                    <p>Determina la posizione della voce nella gerarchia del menu. Supporta un livello di nidificazione (ad esempio, "I miei Segnalibri\Lavoro").</p>
+                    <p>Determina la posizione della voce di menu nella gerarchia. Supporta un livello di annidamento (ad esempio, "I miei Segnalibri\Lavoro").</p>
                     <p>Categorie speciali:</p>
                     <ul>
-                        <li>projects, modules, addons - aggiunge la voce al menu azioni corrispondente</li>
-                        <li>projects\<nome_dominio>, modules\<nome_modulo>, addons\<nome_componente_aggiuntivo> - aggiunge una voce per un elemento specifico</li>
+                        <li>projects, modules, addons - aggiunge la voce al corrispondente menu delle azioni</li>
+                        <li>projects\<имя_домена>, modules\<имя_модуля>, addons\<имя_дополнения> - aggiunge la voce per un elemento specifico</li>
                     </ul>
-                    <p>Se la categoria non è specificata, la voce viene creata nel menu radice.</p>
+                    <p>Se la categoria non è specificata, la voce viene creata nel menu principale.</p>
                     Predefinito: non impostato
                 </td>
             </tr>
             <tr>
                 <th>command</th>
                 <td>
-                    Comando da eseguire quando la voce di menu viene attivata. Le voci senza comando vengono ignorate.<br><br>
+                    Comando da eseguire all’attivazione della voce di menu. Le voci senza comando vengono ignorate.<br><br>
                     Predefinito: non impostato
                 </td>
             </tr>
             <tr>
                 <th>enabled</th>
                 <td>
-                    Attiva/disattiva la visualizzazione della voce di menu.<br><br>
+                    Abilita/disabilita la visualizzazione della voce di menu.<br><br>
                     Predefinito: on | Valori: on, off
                 </td>
             </tr>
             <tr>
                 <th>hide</th>
                 <td>
-                    Controlla la visibilità della finestra dell'applicazione chiamata. Non influisce sui processi figli.<br><br>
+                    Controlla la visibilità della finestra dell’applicazione richiamata. Non influisce sui processi figlio.<br><br>
                     Predefinito: off | Valori: on, off
                 </td>
             </tr>
@@ -156,19 +156,19 @@
             <tr>
                 <th>need_alias</th>
                 <td>
-                    Visualizza la voce di menu solo per un alias di dominio. Il modello di menu può avere solo una voce con need_alias=on!<br>
-                    Applicabile per categorie: projects<br><br>
+                    Mostra la voce di menu solo per un alias di dominio. Nel template del menu può esserci solo una voce con need_alias=on!<br>
+                    Applicabile per le categorie: projects<br><br>
                     Predefinito: non impostato | Valori: on, off
                 </td>
             </tr>
             <tr>
                 <th>need_category</th>
                 <td>
-                    <p>Limita la visualizzazione della voce di menu a moduli/componenti aggiuntivi di una specifica categoria.</p>
+                    <p>Limita la visualizzazione della voce di menu a modules/addons di una determinata categoria.</p>
                     <p>Formati supportati:</p>
                     <ul>
                         <li>modules, addons</li>
-                        <li>modules\<nome_modulo>, addons\<nome_componente_aggiuntivo>
+                        <li>modules\<имя_модуля>, addons\<имя_дополнения>
                         </li>
                     </ul>
                     Predefinito: non impostato
@@ -177,50 +177,54 @@
             <tr>
                 <th>need_module_shell</th>
                 <td>
-                    Visualizza la voce di menu in base alla presenza di shell/cli nel modulo principale.<br>
-                    Applicabile per categorie: modules, modules\<nome_modulo><br><br>
+                    Mostra la voce di menu a seconda della presenza di shell/cli nel modulo padre.<br>
+                    Applicabile per le categorie: modules, modules\<имя_модуля><br><br>
                         Predefinito: non impostato | Valori: on, off
                 </td>
             </tr>
             <tr>
                 <th>need_state</th>
                 <td>
-                    Visualizza la voce di menu in base allo stato del modulo principale.<br>
-                    Applicabile per categorie: modules, modules\<nome_modulo><br><br>
+                    Mostra la voce di menu a seconda dello stato del modulo padre.<br>
+                    Applicabile per le categorie: modules, modules\<имя_модуля><br><br>
                         Predefinito: non impostato | Valori: on, off
                 </td>
             </tr>
             <tr>
                 <th>need_start_cmd</th>
                 <td>
-                    Visualizza la voce di menu se è presente un comando di avvio nelle impostazioni del progetto.<br>
-                    Applicabile per categorie: projects, projects\<nome_dominio><br><br>
+                    Mostra la voce di menu se è presente un comando di avvio nelle impostazioni del progetto.<br>
+                    Applicabile per le categorie: projects, projects\<имя_домена><br><br>
                         Predefinito: non impostato | Valori: on, off
                 </td>
             </tr>
             <tr>
                 <th>need_use_wt</th>
                 <td>
-                    Visualizza la voce di menu in base all'impostazione di utilizzo di Windows Terminal in Open Server Panel.<br><br>
+                    Mostra la voce di menu in base all’impostazione sull’uso di Windows Terminal in Open Server Panel.<br><br>
                     Predefinito: non impostato | Valori: on, off
                 </td>
             </tr>
             <tr>
                 <th>work_directory</th>
                 <td>
-                    Directory di lavoro per l'esecuzione del comando. Può essere modificata durante l'esecuzione del comando.<br><br>
+                    Directory di lavoro per l’esecuzione del comando. Può cambiare durante l’esecuzione dei comandi.<br><br>
                     Predefinito: {root_dir}
                 </td>
             </tr>
         </tbody>
     </table>
-    <h2>Variabili del modello</h2>
-    Le seguenti variabili del modello possono essere utilizzate nei parametri "command" e "work_directory":
+    <h2>Variabili del template</h2>
+    Nei parametri "command" e "work_directory" è possibile utilizzare le seguenti variabili del template:
     <h3>Variabili generali</h3>
     <table>
         <tr>
             <th>Variabile</th>
             <th>Descrizione</th>
+        </tr>
+        <tr>
+            <td>{date_time}</td>
+            <td>Data/ora corrente (variabile disponibile solo per il parametro "command")</td>
         </tr>
         <tr>
             <td>{root_dir}</td>
@@ -232,14 +236,14 @@
         </tr>
         <tr>
             <td>{root_path}</td>
-            <td>Percorso della directory radice di Open Server Panel</td>
+            <td>Percorso alla directory radice di Open Server Panel</td>
         </tr>
         <tr>
             <td>{web_panel_url}</td>
-            <td>URL dell'interfaccia web</td>
+            <td>URL dell’interfaccia web</td>
         </tr>
     </table>
-    <h3>Variabili speciali (solo per projects e projects\&lt;nome_dominio&gt;)</h3>
+    <h3>Variabili speciali (solo per projects e projects\&lt;имя_домена&gt;)</h3>
     <table>
         <tr>
             <th>Variabile</th>
@@ -251,30 +255,30 @@
         </tr>
         <tr>
             <td>{host}</td>
-            <td>Nome di dominio (Punycode)</td>
+            <td>Nome del dominio (Punycode)</td>
         </tr>
         <tr>
             <td>{host_decoded}</td>
-            <td>Nome di dominio visibile (senza Punycode)</td>
+            <td>Nome visibile del dominio (senza Punycode)</td>
         </tr>
         <tr>
             <td>{host_scheme}</td>
-            <td>Schema di richiesta del progetto ("http" o "https", dipende dal parametro SSL nelle impostazioni del progetto)</td>
+            <td>Schema della richiesta al progetto ("http" o "https", dipende dal parametro TLS nelle impostazioni del progetto)</td>
         </tr>
         <tr>
             <td>{http_port}</td>
-            <td>Porta di richiesta del protocollo HTTP per il progetto</td>
+            <td>Porta della richiesta al progetto tramite HTTP</td>
         </tr>
         <tr>
             <td>{https_port}</td>
-            <td>Porta di richiesta del protocollo HTTPS per il progetto</td>
+            <td>Porta della richiesta al progetto tramite HTTPS</td>
         </tr>
         <tr>
             <td>{menu_caption}</td>
             <td>Titolo della voce di menu (solo per la categoria projects con need_alias=ON)</td>
         </tr>
         <tr>
-            <td>{web_engine}</td>
+            <td>{http_engine}</td>
             <td>Motore HTTP</td>
         </tr>
         <tr>
@@ -286,31 +290,31 @@
             <td>Motore PHP</td>
         </tr>
         <tr>
-            <td>{project_dir}</td>
+            <td>{project_root}</td>
             <td>Directory radice del progetto</td>
         </tr>
         <tr>
-            <td>{project_url}</td>
+            <td>{base_url}</td>
             <td>URL del progetto</td>
         </tr>
         <tr>
-            <td>{public_dir}</td>
+            <td>{web_root}</td>
             <td>Directory pubblica del progetto</td>
         </tr>
         <tr>
             <td>{scheme_port}</td>
-            <td>Porta di richiesta del progetto (":{http_port}" o ":{https_port}", dipende dal parametro SSL nelle impostazioni del progetto). Se {http_port} o {https_port} ha un valore standard di 80 o 443, allora {scheme_port} sarà vuoto.</td>
+            <td>Porta della richiesta al progetto (":{http_port}" o ":{https_port}", dipende dal parametro TLS nelle impostazioni del progetto). Se {http_port} o {https_port} ha il valore standard 80 o 443, allora {scheme_port} sarà vuota.</td>
         </tr>
         <tr>
-            <td>{start_command}</td>
-            <td>Comando di avvio del progetto (se configurato)</td>
+            <td>{app_start_command}</td>
+            <td>Comando di avvio dell’applicazione del progetto (se impostato)</td>
         </tr>
         <tr>
             <td>{terminal_codepage}</td>
             <td>Codifica della console</td>
         </tr>
     </table>
-    <h3>Variabili speciali (solo per addons e addons\&lt;nome_componente_aggiuntivo&gt;)</h3>
+    <h3>Variabili speciali (solo per addons e addons\&lt;имя_дополнения&gt;)</h3>
     <table>
         <tr>
             <th>Variabile</th>
@@ -318,14 +322,14 @@
         </tr>
         <tr>
             <td>{addon_name}</td>
-            <td>Nome del componente aggiuntivo</td>
+            <td>Nome dell’addon</td>
         </tr>
         <tr>
             <td>{terminal_codepage}</td>
             <td>Codifica della console</td>
         </tr>
     </table>
-    <h3>Variabili speciali (solo per modules e modules\&lt;nome_modulo&gt;)</h3>
+    <h3>Variabili speciali (solo per modules e modules\&lt;имя_модуля&gt;)</h3>
     <table>
         <tr>
             <th>Variabile</th>
@@ -357,7 +361,7 @@
         </tr>
         <tr>
             <td>{shell_command}</td>
-            <td>Comando di avvio della shell/cli del modulo (se configurato)</td>
+            <td>Comando di avvio della shell/cli del modulo (se impostato)</td>
         </tr>
         <tr>
             <td>{terminal_codepage}</td>
@@ -380,35 +384,27 @@
         </tr>
         <tr>
             <td>command_open_idn_converter</td>
-            <td>Apri il convertitore IDN</td>
+            <td>Apri l’IDN-converter</td>
         </tr>
         <tr>
             <td>command_open_options</td>
             <td>Apri la finestra delle impostazioni del programma</td>
         </tr>
     </table>
-    <p>Oltre alle variabili del modello, è possibile utilizzare qualsiasi variabile di ambiente Windows, come: %COMSPEC%, %SYSTEMDRIVE%, %USERNAME%, %PATH%, ecc.</p>
-    <h3>Esempi di utilizzo</h3>
+    <p>Oltre alle variabili del template, è possibile utilizzare qualsiasi variabile d’ambiente di Windows, ad esempio: %SYSTEMROOT%, %SYSTEMDRIVE%, %USERNAME%, %PATH%, ecc.</p>
+    <h3>Esempio di utilizzo</h3>
     <pre class="code">
-[21]
-
-caption  = Apri in PhpStorm
-category = projects
-command  = "%COMSPEC%" /c "osp project {host_decoded} & start "" "C:\chrome.exe" "{project_dir}""
-hide     = on
-icon     = code
-
-[22]
+[bookmark_1]
 
 caption  = Google
 category = I miei Segnalibri\Motori di ricerca
-command  = "%COMSPEC%" /c "start "" "https://google.com""
+command  = cmd.exe /c "start "" "https://google.com""
 hide     = on
 icon     = bookmark</pre>
-    <h3>Opzioni `cmd.exe`</h3>
+    <h3>Opzioni di CMD.EXE</h3>
     <ul>
-        <li>/c: Esegui il comando e chiudi il terminale.</li>
-        <li>/k: Esegui il comando e mantieni il terminale aperto.</li>
+        <li>/c: Eseguire il comando e chiudere il terminale.</li>
+        <li>/k: Eseguire il comando e lasciare il terminale aperto.</li>
     </ul>
 </body>
 

@@ -223,6 +223,10 @@
             <th>Описание</th>
         </tr>
         <tr>
+            <td>{date_time}</td>
+            <td>Текущая дата/время (переменная доступна только для параметра "command")</td>
+        </tr>
+        <tr>
             <td>{root_dir}</td>
             <td>Корневой каталог Open Server Panel (полный путь)</td>
         </tr>
@@ -259,7 +263,7 @@
         </tr>
         <tr>
             <td>{host_scheme}</td>
-            <td>Схема запроса к проекту ("http" или "https", зависит от параметра SSL в настройках проекта)</td>
+            <td>Схема запроса к проекту ("http" или "https", зависит от параметра TLS в настройках проекта)</td>
         </tr>
         <tr>
             <td>{http_port}</td>
@@ -274,7 +278,7 @@
             <td>Заголовок пункта меню (только для категории projects с need_alias=ON)</td>
         </tr>
         <tr>
-            <td>{web_engine}</td>
+            <td>{http_engine}</td>
             <td>Движок HTTP</td>
         </tr>
         <tr>
@@ -286,24 +290,24 @@
             <td>Движок PHP</td>
         </tr>
         <tr>
-            <td>{project_dir}</td>
+            <td>{project_root}</td>
             <td>Корневой каталог проекта</td>
         </tr>
         <tr>
-            <td>{project_url}</td>
+            <td>{base_url}</td>
             <td>URL проекта</td>
         </tr>
         <tr>
-            <td>{public_dir}</td>
+            <td>{web_root}</td>
             <td>Публичный каталог проекта</td>
         </tr>
         <tr>
             <td>{scheme_port}</td>
-            <td>Порт запроса к проекту (":{http_port}" или ":{https_port}", зависит от параметра SSL в настройках проекта). Если {http_port} или {https_port} имеет стандартное значение 80 или 443, то {scheme_port} будет пустым.</td>
+            <td>Порт запроса к проекту (":{http_port}" или ":{https_port}", зависит от параметра TLS в настройках проекта). Если {http_port} или {https_port} имеет стандартное значение 80 или 443, то {scheme_port} будет пустым.</td>
         </tr>
         <tr>
-            <td>{start_command}</td>
-            <td>Команда запуска проекта (если настроена)</td>
+            <td>{app_start_command}</td>
+            <td>Команда запуска приложения проекта (если настроена)</td>
         </tr>
         <tr>
             <td>{terminal_codepage}</td>
