@@ -576,7 +576,7 @@
             "_strict":true,
             "_children":[
                {
-                  "key":"public_dir",
+                  "key":"web_root",
                   "value":{
                      "_type":"UString",
                      "_value":"{base_dir}",
@@ -584,7 +584,7 @@
                   }
                },
                {
-                  "key":"project_url",
+                  "key":"base_url",
                   "value":{
                      "_type":"UString",
                      "_value":"{host_scheme}:\/\/{host_decoded}{scheme_port}",
@@ -592,7 +592,7 @@
                   }
                },
                {
-                  "key":"http2",
+                  "key":"http2_enabled",
                   "value":{
                      "_type":"Boolean",
                      "_value":false,
@@ -600,7 +600,7 @@
                   }
                },
                {
-                  "key":"ssl_key_file",
+                  "key":"tls_key_file",
                   "value":{
                      "_type":"UString",
                      "_value":"",
@@ -616,7 +616,7 @@
                   }
                },
                {
-                  "key":"project_dir",
+                  "key":"project_root",
                   "value":{
                      "_type":"UString",
                      "_value":"{base_dir}",
@@ -624,7 +624,7 @@
                   }
                },
                {
-                  "key":"ssl",
+                  "key":"tls_enabled",
                   "value":{
                      "_type":"Boolean",
                      "_value":true,
@@ -632,14 +632,14 @@
                   }
                },
                {
-                  "key":"ip",
+                  "key":"bind_ip",
                   "value":{
                      "_type":"Empty",
                      "_strict":true
                   }
                },
                {
-                  "key":"start_command",
+                  "key":"app_start_command",
                   "value":{
                      "_type":"UString",
                      "_value":"",
@@ -663,7 +663,7 @@
                   }
                },
                {
-                  "key":"backend",
+                  "key":"backend_enabled",
                   "value":{
                      "_type":"Boolean",
                      "_value":false,
@@ -671,7 +671,7 @@
                   }
                },
                {
-                  "key":"web_engine",
+                  "key":"http_engine",
                   "value":{
                      "_type":"UString",
                      "_value":"",
@@ -679,7 +679,7 @@
                   }
                },
                {
-                  "key":"ssl_cert_file",
+                  "key":"tls_cert_file",
                   "value":{
                      "_type":"UString",
                      "_value":"",
@@ -718,7 +718,7 @@
                   }
                },
                {
-                  "key":"enabled",
+                  "key":"project_enabled",
                   "value":{
                      "_type":"Boolean",
                      "_value":true,
@@ -734,7 +734,7 @@
                   }
                },
                {
-                  "key":"aliases",
+                  "key":"server_aliases",
                   "value":{
                      "_type":"Empty",
                      "_strict":true,
