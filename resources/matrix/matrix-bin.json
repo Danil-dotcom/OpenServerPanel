@@ -1,6 +1,13 @@
 {
     "tools": [
     {
+        "name": "7za",
+        "url": "local",
+        "local_zip": "..\\resources\\dist\\7za.25.01.zip",
+        "files": ["7za.exe", "7za.dll", "7zxa.dll"],
+        "help_command": ["7za.exe", "--help"]
+    },
+    {
         "name": "aria2c",
         "url": "https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0-win-64bit-build1.zip",
         "extract_path": "aria2-*",
