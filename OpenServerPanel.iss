@@ -130,6 +130,10 @@ Name: "modules\dns";                   Description: "DNS";                      
 Name: "modules\dns\bind";              Description: "Bind 9.17";             Types: full;                         Flags: disablenouninstallwarning; check: IsWindows10OrNewer
 Name: "modules\dns\unbound";           Description: "Unbound 1.24";          Types: full;                         Flags: disablenouninstallwarning
 
+Name: "modules\web";                   Description: "HTTP";
+Name: "modules\web\apache";            Description: "Apache 2.4";            Types: full compact;                 Flags: disablenouninstallwarning
+Name: "modules\web\nginx";             Description: "Nginx 1.29";            Types: full compact;                 Flags: disablenouninstallwarning
+
 Name: "modules\mail";                  Description: "Mail";                                                       Flags: disablenouninstallwarning
 Name: "modules\mail\mailpit";          Description: "Mailpit 1.27";          Types: full compact;                 Flags: disablenouninstallwarning
 Name: "modules\mail\smtp4dev";         Description: "Smtp4dev 3.10";          Types: full compact;                 Flags: disablenouninstallwarning
@@ -183,10 +187,6 @@ Name: "modules\rabbitmq\rabbitmq40";   Description: "RabbitMQ 4.0";          Typ
 Name: "modules\rabbitmq\rabbitmq41";   Description: "RabbitMQ 4.1";          Types: full;                         Flags: disablenouninstallwarning
 
 Name: "modules\redis";                 Description: "Redis 8.2";             Types: full compact;                 Flags: disablenouninstallwarning
-
-Name: "modules\web";                   Description: "Web Servers";
-Name: "modules\web\apache";            Description: "Apache 2.4";            Types: full compact;                 Flags: disablenouninstallwarning
-Name: "modules\web\nginx";             Description: "Nginx 1.29";            Types: full compact;                 Flags: disablenouninstallwarning
 
 [Dirs]
 
