@@ -262,14 +262,6 @@
                               "_value":"{root_dir}\\user",
                               "_strict":true
                            }
-                        },
-                        {
-                           "key":"TERM",
-                           "value":{
-                              "_type":"UString",
-                              "_value":"dumb",
-                              "_strict":true
-                           }
                         }
                      ]
                   }
