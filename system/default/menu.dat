@@ -2,7 +2,7 @@
 
 caption        = {lang_open_in_browser}
 category       = projects
-command        = cmd.exe /c "start "" "{project_url}""
+command        = cmd.exe /c "start "" "{base_url}""
 hide           = on
 icon           = up-right-from-square
 
@@ -26,14 +26,14 @@ need_use_wt    = off
 
 caption        = {lang_open_in_explorer}
 category       = projects
-command        = explorer.exe "{project_dir}"
+command        = explorer.exe "{project_root}"
 icon           = folder-closed
-work_directory = {project_dir}
+work_directory = {project_root}
 
 [4]
 
 category       = projects
-command        = cmd.exe /c "start "" "{project_url}""
+command        = cmd.exe /c "start "" "{base_url}""
 hide           = on
 need_alias     = on
 icon           = up-right-from-square
