@@ -793,7 +793,7 @@ function Install-LocalFiles {
 
 function Install-PhpMyAdmin {
     param(
-        [string]$DownloadUrl = "https://files.phpmyadmin.net/phpMyAdmin/5.2.2/phpMyAdmin-5.2.2-all-languages.zip",
+        [string]$DownloadUrl = "https://files.phpmyadmin.net/phpMyAdmin/5.2.3/phpMyAdmin-5.2.3-all-languages.zip",
         [string]$TargetDir   = "..\home\phpmyadmin"
     )
 
