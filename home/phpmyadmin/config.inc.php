@@ -107,7 +107,7 @@ $cfg['DefaultLang']                    = 'auto';
 $cfg['ServerDefault']                  = 0;
 $cfg['UploadDir']                      = '';
 $cfg['SaveDir']                        = '';
-
+$cfg['ExecTimeLimit']                  = 900;
 $cfg['ActionLinksMode']                = 'icons';
 $cfg['AjaxEnable']                     = true;
 $cfg['blowfish_secret']                = 'c75609ce35eca302065d07c3a7d1b4e5';
